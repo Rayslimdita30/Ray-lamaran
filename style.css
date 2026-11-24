@@ -261,6 +261,27 @@ body {
     text-align: right;
 }
 
+/* Animasi masuk yang dijalankan oleh script.js */
+.motion-enabled .reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 500ms ease, transform 500ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.motion-enabled .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .motion-enabled .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 /* Pengaturan Cetak / Save to PDF */
 @media print {
     body {
@@ -271,6 +292,11 @@ body {
         box-shadow: none;
         width: 100%;
         min-height: 100vh;
+    }
+    .motion-enabled .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
     @page {
         size: A4;
