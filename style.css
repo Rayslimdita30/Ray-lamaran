@@ -1,0 +1,279 @@
+/* Reset & Pengaturan Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #e9ecef;
+    color: #333333;
+    line-height: 1.5;
+    font-size: 13.5px;
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+/* Kontainer Utama Ukuran Kertas A4 */
+.cv-container {
+    width: 210mm;
+    min-height: 297mm;
+    background-color: #ffffff;
+    display: flex;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= KOLOM KIRI (SIDEBAR) ================= */
+.sidebar {
+    width: 34%;
+    background-color: #1e293b; /* Biru gelap profesional */
+    color: #f8fafc;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Placeholder Foto */
+.photo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.photo-placeholder {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    background-color: #334155;
+    border: 3px solid #94a3b8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    color: #cbd5e1;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 50%;
+}
+
+.sidebar-section h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #38bdf8; /* Aksen biru muda */
+    border-bottom: 1px solid #334155;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+.contact-list, .sidebar-list {
+    list-style: none;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 12.5px;
+    word-break: break-word;
+}
+
+.contact-icon {
+    color: #38bdf8;
+    font-size: 14px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.sidebar-list li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 7px;
+    font-size: 12.5px;
+}
+
+.sidebar-list li::before {
+    content: "•";
+    color: #38bdf8;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.additional-info {
+    font-size: 12.5px;
+    color: #e2e8f0;
+    line-height: 1.55;
+}
+
+/* ================= KOLOM KANAN (KONTEN UTAMA) ================= */
+.main-content {
+    width: 66%;
+    padding: 35px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header Nama & Ringkasan */
+.cv-header {
+    border-bottom: 2px solid #1e293b;
+    padding-bottom: 16px;
+}
+
+.cv-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0284c7;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.cv-header h1 {
+    font-size: 26px;
+    color: #0f172a;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.cv-header .target-role {
+    font-size: 15px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 12px;
+}
+
+.cv-header .summary {
+    font-size: 13px;
+    color: #334155;
+    text-align: justify;
+}
+
+/* Judul Bagian Utama */
+.main-section h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1e293b;
+    border-bottom: 1.5px solid #cbd5e1;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+}
+
+/* Tabel Profil Pribadi */
+.personal-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.personal-table td {
+    padding: 3px 0;
+    vertical-align: top;
+}
+
+.personal-table td:first-child {
+    width: 165px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.personal-table td:nth-child(2) {
+    width: 15px;
+    color: #475569;
+}
+
+/* Item Pengalaman, Pendidikan, Organisasi, Proyek */
+.entry-item {
+    margin-bottom: 14px;
+}
+
+.entry-item:last-child {
+    margin-bottom: 0;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.entry-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+.entry-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0284c7;
+    white-space: nowrap;
+}
+
+.entry-subtitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 5px;
+}
+
+.entry-desc {
+    font-size: 13px;
+    color: #334155;
+}
+
+.entry-list {
+    margin-left: 18px;
+    margin-top: 4px;
+    font-size: 13px;
+    color: #334155;
+}
+
+.entry-list li {
+    margin-bottom: 3px;
+}
+
+/* Footer Referensi */
+.cv-footer {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dashed #cbd5e1;
+    font-size: 12px;
+    font-style: italic;
+    color: #64748b;
+    text-align: right;
+}
+
+/* Pengaturan Cetak / Save to PDF */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+    .cv-container {
+        box-shadow: none;
+        width: 100%;
+        min-height: 100vh;
+    }
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
